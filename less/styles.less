@@ -1,0 +1,338 @@
+// Mixins and variables
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+@accentcolor: #ff4799;
+@neutralcolor: #999;
+@panelcolor1: #f4f4f4;
+@panelcolor2: #e9e9e9;
+
+// Body 
+
+body {
+	padding-bottom: 0;
+}
+
+// Typography
+
+a {
+	color: @accentcolor;
+}
+
+a:hover {
+	color: @accentcolor;
+	.opacity(0.7);
+	text-decoration: none;
+	transition: opacity .2s ease-in-out;
+	   -moz-transition: opacity .2s ease-in-out;
+	   -webkit-transition: opacity .2s ease-in-out;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 2em;
+	letter-spacing: 1px;
+}
+
+.footer .navbar-brand {
+	color: @neutralcolor;
+	text-transform: uppercase;
+	font-size: 2em;
+	letter-spacing: 1px;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+}
+.marketing, .services, .about {
+	padding: 50px 0 60px 0;
+	color: #000;
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+	p {	
+		font-size: 1.1em;
+	}
+}
+
+// Buttons
+
+.btn.altcolor {
+	border: 2px solid #fff;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: .5em;
+	letter-spacing: 1px;
+	.border-radius(3px);
+}
+.featurette {
+	.btn.altcolor {
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+}
+.featurette.second  {
+	.btn.altcolor {
+		border: 2px solid #000;
+		color: #000;
+	}
+}	
+
+
+// Featurettes
+
+.featurette {
+	&.first {
+		background-color: @accentcolor;
+		hr.header-decoration {
+			border: 2px solid #fff;
+			width: 35px;
+			margin: 15px auto 15px 0;
+		}
+		p, h2 {
+			color: #fff;
+		}
+	}
+	hr.header-decoration {
+		border: 2px solid @accentcolor;
+		width: 35px;
+		margin: 15px auto 15px 0;
+	}
+	.row{
+		.col-md-6 {
+			padding: 0;
+		}
+		.lead {
+			font-size: 1.1em;
+			line-height: 150%;
+		}
+		.content {
+			padding: 20px 50px;
+		}
+	}
+}
+
+.featurette-heading {
+	font-size: 1.6em;
+	line-height: 125%;
+	letter-spacing: 0.5px;
+	margin-bottom: .2em;
+}
+
+// Header decoration
+
+.marketing, .services, .about {
+ 	hr.header-decoration {
+		border: 2px solid @accentcolor;
+		width: 70px;
+		margin: 15px auto 40px auto;
+	}
+}
+
+
+// Transparent navbar
+
+.navbar-wrapper {
+	margin: 0;
+}
+
+.navbar {
+	padding-top: 10px;
+}
+
+.navbar-inverse {
+	background: none;
+	border: none;	
+}
+
+
+// Hide carousel indicators
+
+.carousel-indicators {
+	display: none;
+}
+
+
+// Hero image size and color
+
+.carousel {
+  height: 600px;
+  margin-bottom: 0;
+}
+.carousel .item {
+  height: 600px;
+  background: #402d32;
+ }
+.carousel-inner > .item > img {
+		max-width: none;
+		height: 600px;
+}
+
+
+// Hero text and buttons
+
+
+.carousel-caption {
+	text-shadow: none;
+	img {
+		margin-bottom: 30px;
+	}
+	p {
+		font-size: 2em;
+		line-height: 125%;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		&:first-of-type {
+			margin-bottom: 40px;
+		}
+	}
+	.social {
+		margin-bottom: 40px;
+		a {
+			margin-right: 15px;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		.fa {
+			font-size: 1.4em;
+			color: #fff;
+		}
+	}
+	.scroll-arrow {
+		font-size: 3em;
+	}
+	
+}
+
+
+// Four steps
+
+.marketing .steps {
+	 font-weight: normal;
+	 img { 
+		 margin-bottom: 20px;
+		 max-height: 140px;
+	 }
+	.col-lg-3 {
+		margin: 0;
+		padding: 0 20px 30px 20px;
+		text-align: center;
+	}
+}
+
+// Content sections
+
+.services {
+	background-color: @panelcolor1;
+}
+.about {
+	background-color: @panelcolor1;
+}
+
+// Footer
+
+section.footer {
+	padding: 30px 0;
+	background-color: @panelcolor2;
+	.logo {
+		float: clear;
+		font-size: 2em;
+		margin-bottom: 10px;
+	}
+	.copyright {
+		float: left;
+		margin-right: 30px;
+	}
+	.nav {
+		float: left;	
+	}
+	.social {
+		float: right;
+		font-size: 1.8em;
+		i {
+			margin-left: 15px;
+		}
+		a {
+			color: @neutralcolor;
+		}
+	}
+}
+
+
+// Responsive
+
+@media (min-width: 1450px) {
+	.carousel-inner > .item > img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-width: 100%;
+	    height: auto;
+	    max-width: 100%;
+  	}
+}
+
+@media (min-width: 992px) {
+	.marketing .steps {
+			.col-lg-3 {
+				width: 25%;
+				float: left;
+				position: relative;
+				min-height: 1px;
+				background: 0 25% url("../images/icon-chevron.png") no-repeat;
+				&:first-of-type {
+					background-image: none;
+				}
+				img {
+						max-height: 100px;
+				}
+			}
+	}
+	.services, .about {
+		.container p {
+			width: 60%;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 170%;
+		}
+	}
+	.featurette.first {
+		text-align: right;
+		hr.header-decoration {
+			margin: 15px 0 15px auto;
+		}
+	}
+	.featurette-heading {
+		margin-top: 80px;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+	.featurette .container {
+		width: auto;
+	}
+}
+
+
+

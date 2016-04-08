@@ -1,0 +1,259 @@
+body {
+  padding-bottom: 0;
+}
+a {
+  color: #ff4799;
+}
+a:hover {
+  color: #ff4799;
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+.footer .navbar-brand {
+  color: #999999;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.marketing,
+.services,
+.about {
+  padding: 50px 0 60px 0;
+  color: #000;
+}
+.marketing h2,
+.services h2,
+.about h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.marketing p,
+.services p,
+.about p {
+  font-size: 1.1em;
+}
+.btn.altcolor {
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .5em;
+  letter-spacing: 1px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.featurette .btn.altcolor {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.featurette.second .btn.altcolor {
+  border: 2px solid #000;
+  color: #000;
+}
+.featurette.first {
+  background-color: #ff4799;
+}
+.featurette.first hr.header-decoration {
+  border: 2px solid #fff;
+  width: 35px;
+  margin: 15px auto 15px 0;
+}
+.featurette.first p,
+.featurette.first h2 {
+  color: #fff;
+}
+.featurette hr.header-decoration {
+  border: 2px solid #ff4799;
+  width: 35px;
+  margin: 15px auto 15px 0;
+}
+.featurette .row .col-md-6 {
+  padding: 0;
+}
+.featurette .row .lead {
+  font-size: 1.1em;
+  line-height: 150%;
+}
+.featurette .row .content {
+  padding: 20px 50px;
+}
+.featurette-heading {
+  font-size: 1.6em;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  margin-bottom: .2em;
+}
+.marketing hr.header-decoration,
+.services hr.header-decoration,
+.about hr.header-decoration {
+  border: 2px solid #ff4799;
+  width: 70px;
+  margin: 15px auto 40px auto;
+}
+.navbar-wrapper {
+  margin: 0;
+}
+.navbar {
+  padding-top: 10px;
+}
+.navbar-inverse {
+  background: none;
+  border: none;
+}
+.carousel-indicators {
+  display: none;
+}
+.carousel {
+  height: 600px;
+  margin-bottom: 0;
+}
+.carousel .item {
+  height: 600px;
+  background: #402d32;
+}
+.carousel-inner > .item > img {
+  max-width: none;
+  height: 600px;
+}
+.carousel-caption {
+  text-shadow: none;
+}
+.carousel-caption img {
+  margin-bottom: 30px;
+}
+.carousel-caption p {
+  font-size: 2em;
+  line-height: 125%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-caption p:first-of-type {
+  margin-bottom: 40px;
+}
+.carousel-caption .social {
+  margin-bottom: 40px;
+}
+.carousel-caption .social a {
+  margin-right: 15px;
+}
+.carousel-caption .social a:last-child {
+  margin: 0;
+}
+.carousel-caption .social .fa {
+  font-size: 1.4em;
+  color: #fff;
+}
+.carousel-caption .scroll-arrow {
+  font-size: 3em;
+}
+.marketing .steps {
+  font-weight: normal;
+}
+.marketing .steps img {
+  margin-bottom: 20px;
+  max-height: 140px;
+}
+.marketing .steps .col-lg-3 {
+  margin: 0;
+  padding: 0 20px 30px 20px;
+  text-align: center;
+}
+.services {
+  background-color: #f4f4f4;
+}
+.about {
+  background-color: #f4f4f4;
+}
+section.footer {
+  padding: 30px 0;
+  background-color: #e9e9e9;
+}
+section.footer .logo {
+  float: clear;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+section.footer .copyright {
+  float: left;
+  margin-right: 30px;
+}
+section.footer .nav {
+  float: left;
+}
+section.footer .social {
+  float: right;
+  font-size: 1.8em;
+}
+section.footer .social i {
+  margin-left: 15px;
+}
+section.footer .social a {
+  color: #999999;
+}
+@media (min-width: 1450px) {
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .marketing .steps .col-lg-3 {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    background: 0 25% url("../images/icon-chevron.png") no-repeat;
+  }
+  .marketing .steps .col-lg-3:first-of-type {
+    background-image: none;
+  }
+  .marketing .steps .col-lg-3 img {
+    max-height: 100px;
+  }
+  .services .container p,
+  .about .container p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 170%;
+  }
+  .featurette.first {
+    text-align: right;
+  }
+  .featurette.first hr.header-decoration {
+    margin: 15px 0 15px auto;
+  }
+  .featurette-heading {
+    margin-top: 80px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .featurette .container {
+    width: auto;
+  }
+}
