@@ -1,0 +1,22 @@
+# NPM-Generated Files
+node_modules/
+
+# Caches
+.sass-cache
+
+# Compiled Assets
+wp-content/themes/attck/lib/assets/out/css/app.css
+wp-content/themes/attck/lib/assets/out/css/app.css.map
+wp-content/themes/attck/lib/assets/out/js
+wp-content/themes/attck/lib/assets/out/svg
+
+# Config files
+wp-config.php
+wp-content/uploads
+
+*.sublime-workspace
+
+.DS_Store
+
+NuCrew2.esproj/user.karen.espressostorage
+NuCrew2.esproj/Project.espressostorage
