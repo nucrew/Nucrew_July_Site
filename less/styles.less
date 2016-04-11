@@ -14,18 +14,18 @@
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
 }
-@accentcolor: #ff4799;
+@accentcolor: #ff4779;
 @neutralcolor: #999;
 @panelcolor1: #f4f4f4;
 @panelcolor2: #e9e9e9;
 
-// Body 
+// Typography
 
 body {
+	font-family: "roboto",sans-serif;
 	padding-bottom: 0;
+	color: #333;
 }
-
-// Typography
 
 a {
 	color: @accentcolor;
@@ -40,41 +40,48 @@ a:hover {
 	   -webkit-transition: opacity .2s ease-in-out;
 }
 
+// Logo in header
 .navbar-inverse .navbar-brand {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 2em;
-	letter-spacing: 1px;
+	img {
+		width: 140px;
+	}
 }
+
+// Logo in footer
 
 .footer .navbar-brand {
-	color: @neutralcolor;
-	text-transform: uppercase;
-	font-size: 2em;
-	letter-spacing: 1px;
+	padding: 0 20px 0 0;
+	img {
+		width: 140px;
+	}
 }
 
 
-.navbar-inverse .navbar-nav>li>a {
-	color: #fff;
-}
-.marketing, .services, .about {
-	padding: 50px 0 60px 0;
+// Sections 
+
+.marketing, .services, .about, .content-main {
+	padding: 50px 15px 70px 15px;
 	color: #000;
 	h2 {
+		font-size: 2.4em;
+		font-family: "Open Sans",sans-serif;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		margin-bottom: 0;
-		font-weight: bold;
+		font-weight: 600;
 	}
 	p {	
+		line-height: 170%;
 		font-size: 1.1em;
 	}
 }
 
 // Buttons
 
+.btn {
+	font-family: "roboto",sans-serif;
+}
 .btn.altcolor {
 	border: 2px solid #fff;
 	color: #fff;
@@ -89,7 +96,7 @@ a:hover {
 		font-weight: bold;
 	}
 }
-.featurette.second  {
+.featurette.even  {
 	.btn.altcolor {
 		border: 2px solid #000;
 		color: #000;
@@ -100,10 +107,10 @@ a:hover {
 // Featurettes
 
 .featurette {
-	&.first {
+	&.odd {
 		background-color: @accentcolor;
 		hr.header-decoration {
-			border: 2px solid #fff;
+			border: 2px solid #1d1d1d;
 			width: 35px;
 			margin: 15px auto 15px 0;
 		}
@@ -128,10 +135,17 @@ a:hover {
 			padding: 20px 50px;
 		}
 	}
+	.subhead span {
+		text-transform: uppercase;
+		.opacity;
+	}
 }
 
 .featurette-heading {
+	font-family: "Playfair Display",serif;
+	font-weight: 700;
 	font-size: 1.6em;
+	text-rendering: optimizeLegibility;
 	line-height: 125%;
 	letter-spacing: 0.5px;
 	margin-bottom: .2em;
@@ -139,7 +153,7 @@ a:hover {
 
 // Header decoration
 
-.marketing, .services, .about {
+.marketing, .services, .about, .content-main {
  	hr.header-decoration {
 		border: 2px solid @accentcolor;
 		width: 70px;
@@ -148,7 +162,22 @@ a:hover {
 }
 
 
-// Transparent navbar
+// Navbar
+
+.navbar-inverse {
+	.navbar-collapse {
+		border-color: rgba(255,255,255,0.2);
+	}
+	.navbar-toggle {
+		&:hover {
+			background-color: transparent;
+			.opacity(0.7);
+		}
+	}
+	.navbar-nav>li>a {
+		color: #fff;
+	}
+}
 
 .navbar-wrapper {
 	margin: 0;
@@ -156,6 +185,16 @@ a:hover {
 
 .navbar {
 	padding-top: 10px;
+	font-size: 1.1em;
+	.navbar-nav {
+		padding-top: 5px;
+	}
+	h1 {
+		margin: 0;
+		span {
+			margin-left: -9999em;
+		}
+	}
 }
 
 .navbar-inverse {
@@ -163,6 +202,15 @@ a:hover {
 	border: none;	
 }
 
+.navbar-toggle {
+	padding-top: 13px;
+	border: none;
+}
+
+.subpage .navbar {
+	background-color: #000;
+	padding-bottom: 10px;
+}
 
 // Hide carousel indicators
 
@@ -196,9 +244,13 @@ a:hover {
 		margin-bottom: 30px;
 	}
 	p {
-		font-size: 2em;
+		font-family: "Playfair Display",serif;
+		font-weight: 700;
+		font-size: 2.1em;
+		letter-spacing: 0.5px;
+		text-rendering: optimizeLegibility;
 		line-height: 125%;
-		max-width: 400px;
+		max-width: 470px;
 		margin-left: auto;
 		margin-right: auto;
 		&:first-of-type {
@@ -220,6 +272,9 @@ a:hover {
 	}
 	.scroll-arrow {
 		font-size: 3em;
+		a {
+			color: #fff;
+		}
 	}
 	
 }
@@ -242,56 +297,77 @@ a:hover {
 
 // Content sections
 
-.services {
+.services, .about {
 	background-color: @panelcolor1;
 }
-.about {
-	background-color: @panelcolor1;
+.content-main {
+		margin-top: 50px;
 }
 
 // Footer
 
 section.footer {
+	color: @neutralcolor;
 	padding: 30px 0;
 	background-color: @panelcolor2;
 	.logo {
-		float: clear;
-		font-size: 2em;
-		margin-bottom: 10px;
-	}
-	.copyright {
-		float: left;
-		margin-right: 30px;
+		.opacity;
 	}
 	.nav {
-		float: left;	
+		display: inline-block;
+		width: 100%;
+		margin: 0 0 10px 0;
+		a {
+			margin-right: 20px;
+		}
 	}
 	.social {
-		float: right;
 		font-size: 1.8em;
 		i {
-			margin-left: 15px;
+			margin-right: 15px;
 		}
 		a {
 			color: @neutralcolor;
 		}
+	}
+	.copyright {
+		width: 100%;
+		display: inline-block;	
+		font-size: 0.8em;
+	}
+	.container {
+		padding: 0 30px;
 	}
 }
 
 
 // Responsive
 
-@media (min-width: 1450px) {
-	.carousel-inner > .item > img {
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    min-width: 100%;
-	    height: auto;
-	    max-width: 100%;
-  	}
+@media (min-width: 768px) {
+	.navbar>.container .navbar-brand {
+	}
+	section.footer {
+		.nav {
+			float: left;
+			width: auto;
+			margin: 8px 0 0 0;
+		}
+		.social {
+			float: right;
+			font-size: 1.8em;
+			i {
+				margin-right: 0;
+				margin-left: 15px;
+			}
+			a {
+				color: @neutralcolor;
+			}
+		}
+		.container {
+			padding: 0 30px;
+		}
+	}
 }
-
 @media (min-width: 992px) {
 	.marketing .steps {
 			.col-lg-3 {
@@ -313,10 +389,15 @@ section.footer {
 			width: 60%;
 			margin: 0 auto;
 			text-align: center;
-			line-height: 170%;
 		}
 	}
-	.featurette.first {
+	.services, .about, .marketing {
+			padding: 50px 0 70px 0;
+	}
+	.content-main .container {
+		padding: 0 100px;
+	}
+	.featurette.odd {
 		text-align: right;
 		hr.header-decoration {
 			margin: 15px 0 15px auto;
@@ -327,12 +408,44 @@ section.footer {
 	}
 }
 
+@media (min-width: 1450px) {
+	.carousel-inner > .item > img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-width: 100%;
+	    height: auto;
+	    max-width: 100%;
+  	}
+  	.content-main .container {
+  		padding: 0 150px;
+  	}
+}
+
 
 @media (min-width: 768px) and (max-width: 992px) {
 	.featurette .container {
 		width: auto;
 	}
 }
+
+@media (max-width: 992px) {
+	.carousel-inner > .item > img {
+		left: -25%;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-inner > .item > img {
+		left: -50%;
+	}
+}
+@media (max-width: 375px) {
+	.carousel-inner > .item > img {
+		left: -180%;
+	}
+}
+
 
 
 
