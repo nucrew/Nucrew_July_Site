@@ -145,17 +145,18 @@ a:focus {
 .navbar-wrapper {
   margin: 0;
 }
-.navbar {
+.navbar-wrapper .navbar {
   padding-top: 10px;
   font-size: 1.1em;
+  border-radius: 0;
 }
-.navbar .navbar-nav {
+.navbar-wrapper .navbar .navbar-nav {
   padding-top: 5px;
 }
-.navbar h1 {
+.navbar-wrapper .navbar h1 {
   margin: 0;
 }
-.navbar h1 span {
+.navbar-wrapper .navbar h1 span {
   margin-left: -9999em;
 }
 .navbar-inverse {
