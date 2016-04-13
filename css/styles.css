@@ -229,9 +229,6 @@ a:focus {
   font-size: 1em;
   margin-bottom: 15px;
 }
-.carousel-caption .btn:first-of-type {
-  margin-right: 15px;
-}
 .marketing .steps {
   font-weight: normal;
 }
@@ -375,11 +372,6 @@ section.footer .container {
   .navbar .nav {
     background-color: #000;
     padding-bottom: 10px;
-  }
-}
-@media (max-width: 456px) {
-  .carousel-caption .btn:first-of-type {
-    margin-right: 0;
   }
 }
 @media (max-width: 375px) {
