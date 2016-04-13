@@ -431,8 +431,16 @@ section.footer {
 
 
 @media (min-width: 768px) and (max-width: 992px) {
-	.featurette .container {
-		width: auto;
+	.featurette {
+		.container {
+			width: auto;
+		}
+		.row .content {
+		    padding: 20px 15px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 750px;
+		}
 	}
 }
 
@@ -452,6 +460,10 @@ section.footer {
 	.navbar .nav {
 		background-color: #000;
 		padding-bottom: 10px;
+	}
+	.featurette .row .content {
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
