@@ -326,9 +326,17 @@ section.footer .container {
   .about .container p:last-child {
     margin-bottom: 0;
   }
+  .services-list {
+    width: 73%;
+    margin: 0 auto;
+  }
   .services ul {
-    width: 50%;
+    width: 45%;
     float: left;
+  }
+  .services ul:first-child {
+    width: 40%;
+    margin: 0 10% 0 5%;
   }
   .services,
   .about,
