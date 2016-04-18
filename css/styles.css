@@ -55,6 +55,9 @@ a:focus {
   line-height: 170%;
   font-size: 1.1em;
 }
+.services ul li {
+  margin-bottom: 15px;
+}
 .btn {
   font-family: "roboto", sans-serif;
 }
@@ -316,8 +319,16 @@ section.footer .container {
   .services .container p,
   .about .container p {
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     text-align: center;
+  }
+  .services .container p:last-child,
+  .about .container p:last-child {
+    margin-bottom: 0;
+  }
+  .services ul {
+    width: 50%;
+    float: left;
   }
   .services,
   .about,
