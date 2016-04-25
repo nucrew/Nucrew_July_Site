@@ -1,3 +1,4 @@
+@import 'MyFontsWebfontsKit.less';
 // Mixins and variables
 
 .opacity (@opacity: 0.5) {
@@ -68,7 +69,7 @@ a:focus {
 	color: #000;
 	h2 {
 		font-size: 2.4em;
-		font-family: "Open Sans",sans-serif;
+		font-family: "Lato",sans-serif;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -108,11 +109,15 @@ a:focus {
 		font-weight: bold;
 	}
 }
-.featurette.even  {
+.featurette.even  {	
+	a:focus {
+		color:#ff4779;
+	}
 	.btn.altcolor {
 		border: 2px solid #000;
 		color: #000;
 	}
+
 }	
 
 
@@ -128,6 +133,11 @@ a:focus {
 		}
 		p, h2 {
 			color: #fff;
+
+			.pink-link {	
+				color:#fff;
+				opacity:.5;
+			}
 		}
 	}
 	hr.header-decoration {
@@ -154,8 +164,8 @@ a:focus {
 }
 
 .featurette-heading {
-	font-family: "Playfair Display",serif;
-	font-weight: 700;
+	font-family: "LeituraDisplay-Roman",serif;
+	font-weight: 400;
 	font-size: 1.6em;
 	text-rendering: optimizeLegibility;
 	line-height: 125%;
@@ -259,8 +269,8 @@ a:focus {
 		margin-bottom: 30px;
 	}
 	p {
-		font-family: "Playfair Display",serif;
-		font-weight: 700;
+		font-family: "LeituraDisplay-Roman",serif;
+		font-weight: 400;
 		font-size: 2.1em;
 		letter-spacing: 0.5px;
 		text-rendering: optimizeLegibility;
@@ -325,9 +335,11 @@ a:focus {
 // Footer
 
 section.footer {
+	position: relative;
 	color: @neutralcolor;
 	padding: 30px 0;
 	background-color: @panelcolor2;
+
 	.nav {
 		display: inline-block;
 		width: 100%;
@@ -350,8 +362,56 @@ section.footer {
 		display: inline-block;	
 		font-size: 0.8em;
 	}
+
+	.madeby {
+		font-size: 0.8em;
+		cursor: pointer;
+	    position: absolute;
+	    bottom: 21px;
+	    right: 30px;		
+    	width: 136px;
+
+		&-logo {
+			width: 60px;
+		    position: absolute;
+		    top: 0px;
+		    right: 0;
+		    opacity: .5;
+		    transition: all .2s;
+   		}
+
+		&-text, &-hello {
+		    text-decoration: none;
+		    position: absolute;
+		    top: 0px;
+		    left: 0;
+		    transition: all .2s;
+		}
+
+		&-hello {
+			opacity: 0;
+    		top: -20px;
+		}
+
+		&:hover  {
+			.madeby-text {
+				opacity: 0;
+    			top: 20px;
+			}
+
+			.madeby-hello {
+				opacity: 1;
+    			top: 0;
+			}
+
+			.madeby-logo {
+				opacity: 1;
+			}
+		}
+	}
 	.container {
 		padding: 0 30px;
+		position: relative;
 	}
 }
 
@@ -440,7 +500,7 @@ section.footer {
 		}
 	}
 	.featurette-heading {
-		margin-top: 80px;
+		margin-top: 57px;
 	}
 }
 
