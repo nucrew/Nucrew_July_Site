@@ -348,45 +348,50 @@ section.footer {
 			margin-right: 20px;
 		}
 	}
+
 	.social {
 		font-size: 1.8em;
-		i {
-			margin-right: 15px;
-		}
+
 		a {
 			color: @neutralcolor;
 		}
+
+		i {
+			margin-right: 15px;
+		}
 	}
+
 	.copyright {
-		width: 100%;
 		display: inline-block;
 		font-size: 0.8em;
+		width: 100%;
 	}
 
 	.madeby {
-		font-size: 0.8em;
+		bottom: -2px;
 		cursor: pointer;
-	    position: absolute;
-	    bottom: 21px;
-	    right: 30px;
-    	width: 136px;
+		font-size: 0.8em;
+		height: 20px;
+		position: absolute;
+    right: 30px;
+  	width: 136px;
 
 		&-logo {
+			background: rgba(255, 255, 255, 0.1)
+			opacity: .5;
+			position: absolute;
+	    right: 0;
+			top: 0px;
+	    transition: all .2s;
 			width: 60px;
-		    position: absolute;
-		    top: 0px;
-		    right: 0;
-		    opacity: .5;
-		    transition: all .2s;
-		    background: rgba(255, 255, 255, 0.1)
-   		}
+ 		}
 
 		&-text, &-hello {
-		    text-decoration: none;
-		    position: absolute;
-		    top: 0px;
-		    left: 0;
-		    transition: all .2s;
+			left: 0;
+	    position: absolute;
+			text-decoration: none;
+	    top: 0px;
+	    transition: all .2s;
 		}
 
 		&-hello {
