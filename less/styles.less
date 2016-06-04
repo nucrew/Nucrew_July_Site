@@ -377,7 +377,7 @@ section.footer {
   	width: 136px;
 
 		&-logo {
-			background: rgba(255, 255, 255, 0.1)
+			background: rgba(255, 255, 255, 0.1);
 			opacity: .5;
 			position: absolute;
 	    right: -8px;
@@ -419,6 +419,15 @@ section.footer {
 		padding: 0 30px;
 		position: relative;
 	}
+}
+
+// Add this class to an <a id="..."> to offset it a bit so that the sticky navbar doesn't 
+// obscure what we're linking to. 
+.sticky-anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
 }
 
 
